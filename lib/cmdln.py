@@ -619,6 +619,7 @@ class RawCmdln(cmd.Cmd):
         indent, indent_width = _get_indent(marker, help)
         suffix = _get_trailing_whitespace(marker, help)
 
+        self.optparser = self.get_optparser()
         if self.optparser:
             # Setup formatting options and format.
             # - Indentation of 4 is better than optparse default of 2.
